@@ -9,6 +9,21 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope',function($scope) {
+  $scope.a = Math.floor(Math.random() * (12 -3)) + 3;
+  $scope.b = Math.floor(Math.random() * (25 -5)) + 5;
+  $scope.c = $scope.a * $scope.b 
+  console.log($scope.c);
 
+  $scope.submit= function(){
+  
+    if ($scope.c == $scope.answer){
+      $scope.answerYes = true;
+      $scope.answerNo = false;
+      console.log('true');   
+
+    }else{
+      $scope.answerNo= true;
+    }
+  }
 }]);

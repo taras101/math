@@ -1,6 +1,8 @@
-<p>Here is your question</p>
+<p>Here is your easy question</p>
 <p>What is {{a}} + {{b}} ?</p>
-<label>Answer<input type="number" ng-model="answer">
-<button ng-click="submit()">Go!</button>
-<div ng-show="answerYes">Success!!!!</div>
-<div ng-show="answerNo">Wrong</div>
+<form ng-submit="submit()">
+  <label>Answer <input type="number" ng-model="answer" autofocus>
+  <button ng-click="submit()">Go!</button>
+</form>
+<h2 class="right" ng-show="answerYes">Success!!!!</h2>
+<h3 class="wrong" ng-show="answerNo">Wrong Answer, Try Again</h3>
