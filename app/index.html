@@ -15,9 +15,12 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+  <p>Welcome to the math quiz</p>
+  <p>What level of difficulty would you like to play?</p>
   <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
+    <li><a href="#/view1">Easy</a></li>
+    <li><a href="#/view2">Medium</a></li>
+    <li><a href="#/view3">Hard</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -26,7 +29,6 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

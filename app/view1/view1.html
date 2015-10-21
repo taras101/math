@@ -1,1 +1,6 @@
-<p>This is the partial for view 1.</p>
+<p>Here is your question</p>
+<p>What is {{a}} + {{b}} ?</p>
+<label>Answer<input type="number" ng-model="answer">
+<button ng-click="submit()">Go!</button>
+<div ng-show="answerYes">Success!!!!</div>
+<div ng-show="answerNo">Wrong</div>

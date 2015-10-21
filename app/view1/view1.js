@@ -9,6 +9,24 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope',function($scope) {
+  $scope.a = Math.floor(Math.random() * 100);
+  $scope.b = Math.floor(Math.random() * 100);
+  $scope.c = $scope.a + $scope.b 
+  console.log($scope.c);
+  $scope.answerYes = false;
+  $scope.submit= function(){
+  
+    if ($scope.c = $scope.answer){
+      $scope.answerYes = true;
+      $scope.answerNo = false;
+      console.log('true');
+      
+
+    }else{
+      $scope.answerNo= true;
+
+    }
+  }
 
 }]);
