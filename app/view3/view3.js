@@ -21,7 +21,7 @@ angular.module('myApp.view3', ['ngRoute'])
     if ($scope.c == $scope.answer){
       $scope.answerYes = true;
       $scope.answerNo = false;
-      console.log('true');   
+      // console.log('true');   
 
     }else{
       $scope.answerNo= true;

@@ -16,12 +16,10 @@ angular.module('myApp.view1', ['ngRoute'])
   console.log($scope.c);
 
   $scope.submit= function(){
-    console.log($scope.c);
-    console.log($scope.answer);  
     if ($scope.c == $scope.answer){
       $scope.answerYes = true;
       $scope.answerNo = false;
-      console.log('true');   
+      // console.log('true');   
 
     }else{
       $scope.answerNo= true;
