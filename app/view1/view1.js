@@ -10,19 +10,31 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope',function($scope) {
-  $scope.a = Math.floor(Math.random() * (50 -10)) + 10;
-  $scope.b = Math.floor(Math.random() * (50 -10)) + 10;
-  $scope.c = $scope.a + $scope.b 
-  console.log($scope.c);
+ var genQuiz = function(){ $scope.a = Math.floor(Math.random() * (50 -10)) + 10;
+   $scope.b = Math.floor(Math.random() * (50 -10)) + 10;
+   $scope.c = $scope.a + $scope.b 
+   console.log($scope.c);
+ }
+$scope.showTheForm = true;
+ genQuiz();
+ $scope.score=0;
 
   $scope.submit= function(){
+    // var taras = 6;
+    
+    // counter(taras);
     if ($scope.c == $scope.answer){
       $scope.answerYes = true;
       $scope.answerNo = false;
+      $scope.score++;
+      genQuiz();
+      $scope.answer=null;
       // console.log('true');   
 
     }else{
       $scope.answerNo= true;
+      $scope.answerYes = false;
+      $scope.answer=null;
     }
   }
 
