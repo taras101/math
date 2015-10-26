@@ -38,7 +38,8 @@ config(['$routeProvider', function($routeProvider) {
           console.log("times up");
           $interval.cancel(timer);
           console.log($scope);
-           $scope.showTheForm = false;
+          $scope.showTheForm = false;
+          $scope.showResults =true;
         }
       },1000);
       

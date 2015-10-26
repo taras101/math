@@ -1,11 +1,16 @@
 
-<span count-down>seconds remaining</span>
-<p>Here is your easy question</p>
-<p>What is {{a}} + {{b}} ?</p>
-<form ng-show="showTheForm" name="quizAnswer" >
-  <label>Answer <input type="number" ng-model="answer" autofocus>
-  <button ng-click="submit()">Go!</button>
-</form>
-<h2 class="right" ng-show="answerYes">Success!!!!</h2>
-<h3 class="wrong" ng-show="answerNo">Wrong Answer, Try Again</h3>
+<div ng-show="showTheForm">
+  <span count-down>seconds remaining</span>
+  <p>Here is your easy question</p>
+  <p>What is {{a}} + {{b}} ?</p>
+  <form  name="quizAnswer" >
+    <label>Answer <input type="number" ng-model="answer" autofocus>
+    <button ng-click="submit()">Go!</button>
+  </form>
+  <h2 class="right" ng-show="answerYes">Success!!!!</h2>
+  <h3 class="wrong" ng-show="answerNo">Wrong Answer, Try Again</h3>
+</div>
+<div ng-show="showResults">You got</div>
 <h3>Score:{{score}}&#x2713</h3>
+
+<button ng-show="showResults">Try again</button>

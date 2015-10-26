@@ -15,7 +15,8 @@ angular.module('myApp.view1', ['ngRoute'])
    $scope.c = $scope.a + $scope.b 
    console.log($scope.c);
  }
-$scope.showTheForm = true;
+ $scope.showTheForm = true;
+ $scope.showResults =false;
  genQuiz();
  $scope.score=0;
 
